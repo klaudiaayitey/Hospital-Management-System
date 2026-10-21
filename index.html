@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Patient Queue System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="c:\Users\LENOVO\Desktop\hospital management\srcipt.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🏥 Hospital Patient Queue</h1>
+        <p class="subtitle">Patient Queue Management System</p>
+
+        <!-- Add Patient -->
+        <div class="card">
+            <h2>Add Patient</h2>
+
+            <input type="text" id="patientName" placeholder="Patient Name">
+
+            <input type="number" id="patientAge" placeholder="Age">
+
+            <input type="text" id="patientReason"
+                   placeholder="Reason for Visit">
+
+            <button onclick="addPatient()">Add Patient</button>
+        </div>
+
+        <!-- Current Patient -->
+        <div class="card current">
+            <h2>Currently Being Served</h2>
+
+            <div id="currentPatient">
+                No patient is currently being served.
+            </div>
+
+            <button onclick="serveNext()">Serve Next Patient</button>
+        </div>
+
+        <!-- Queue -->
+        <div class="card">
+            <h2>Waiting Queue</h2>
+
+            <p>
+                Patients Waiting:
+                <strong id="queueCount">0</strong>
+            </p>
+
+            <div id="queueList"></div>
+
+            <button class="clear" onclick="clearQueue()">
+                Clear Queue
+            </button>
+        </div>
+
+    </div>
+
+    
+
+</body>
+</html>
